@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食堂实时监控</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5; /* 浅灰色背景，更显柔和 */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding-top: 40px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px; /* 限制最大宽度，确保大屏幕上不过宽 */
+            text-align: center;
+            background-color: #ffffff; /* 内容区域白色背景 */
+            padding: 30px 40px;
+            border-radius: 12px; /* 更大的圆角 */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* 更柔和自然的阴影 */
+        }
+
+        h1 {
+            color: #1a237e; /* 深蓝紫色标题，更显高端 */
+            font-weight: 500;
+            margin-bottom: 35px; /* 增加标题和按钮间的间距 */
+            font-size: 28px;
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* 单列布局，适应移动端 */
+            gap: 18px; /* 按钮间距 */
+            margin-bottom: 30px;
+        }
+
+        .button-link {
+            display: block;
+            background-color: #3949ab; /* 主题蓝色按钮 */
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            border-radius: 8px; /* 按钮圆角 */
+            font-size: 16px;
+            font-weight: 400;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(57, 73, 171, 0.3); /* 按钮阴影 */
+        }
+
+        .button-link:hover {
+            background-color: #283593; /* 悬停时颜色加深 */
+            transform: translateY(-2px); /* 轻微上浮效果 */
+            box-shadow: 0 6px 15px rgba(57, 73, 171, 0.4);
+        }
+
+        .button-link:active {
+            background-color: #1a237e; /* 点击时颜色再加深 */
+            transform: translateY(0px);
+        }
+
+        .footer-note {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #757575; /* 备注文字颜色 */
+            line-height: 1.6;
+        }
+
+        /* 响应式设计：在中等屏幕上可以考虑两列布局 */
+        @media (min-width: 600px) {
+            .button-grid {
+                grid-template-columns: 1fr 1fr; /* 两列 */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>食堂实时监控</h1>
+        <div class="button-grid">
+            <a href="https://open.ys7.com/console/jssdk/mobile.html?url=ezopen://open.ys7.com/K95769304/1.hd.live&accessToken=ra.bh7t1me91liq6ss2blsigvdt3b4qacgt-7i0lrw2tn3-0wifnty-jo0qbwnjj" target="_blank" class="button-link">进货查验区</a>
+            <a href="https://open.ys7.com/console/jssdk/mobile.html?url=ezopen://open.ys7.com/K95769304/2.hd.live&accessToken=ra.bh7t1me91liq6ss2blsigvdt3b4qacgt-7i0lrw2tn3-0wifnty-jo0qbwnjj" target="_blank" class="button-link">原料清洗区</a>
+            <a href="https://open.ys7.com/console/jssdk/mobile.html?url=ezopen://open.ys7.com/K95769304/3.hd.live&accessToken=ra.bh7t1me91liq6ss2blsigvdt3b4qacgt-7i0lrw2tn3-0wifnty-jo0qbwnjj" target="_blank" class="button-link">切配区</a>
+            <a href="https://open.ys7.com/console/jssdk/mobile.html?url=ezopen://open.ys7.com/K95769304/4.hd.live&accessToken=ra.bh7t1me91liq6ss2blsigvdt3b4qacgt-7i0lrw2tn3-0wifnty-jo0qbwnjj" target="_blank" class="button-link">烹饪区</a>
+            <a href="https://open.ys7.com/console/jssdk/mobile.html?url=ezopen://open.ys7.com/K95769304/5.hd.live&accessToken=ra.bh7t1me91liq6ss2blsigvdt3b4qacgt-7i0lrw2tn3-0wifnty-jo0qbwnjj" target="_blank" class="button-link">备餐区</a>
+            <a href="https://open.ys7.com/console/jssdk/mobile.html?url=ezopen://open.ys7.com/K95769304/6.hd.live&accessToken=ra.bh7t1me91liq6ss2blsigvdt3b4qacgt-7i0lrw2tn3-0wifnty-jo0qbwnjj" target="_blank" class="button-link">餐具清洗区</a>
+            <a href="https://open.ys7.com/console/jssdk/mobile.html?url=ezopen://open.ys7.com/K95769304/7.hd.live&accessToken=ra.bh7t1me91liq6ss2blsigvdt3b4qacgt-7i0lrw2tn3-0wifnty-jo0qbwnjj" target="_blank" class="button-link">餐具消毒区</a>
+        </div>
+        <p class="footer-note">
+            <strong>请注意：</strong> 以上视频链接依赖于一个访问令牌 (accessToken)。此令牌具有时效性，可能会在一段时间后失效。如果视频无法播放，则需要获取新的令牌并更新链接。
+        </p>
+    </div>
+</body>
+</html>
